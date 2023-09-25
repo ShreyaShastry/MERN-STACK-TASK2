@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color: whitesmoke;
+            height: 50vh;
+            width: 65vh;
+            padding: 30px;
+        }
+        #submit{
+            background-color: rgb(99, 23, 23);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <div class="container">
+        <form onsubmit="return validation()">
+            <table>
+                <tr><td><label>Name</label></td></tr>
+                <tr><td><input type="text" id="i1"></td></tr>
+                <tr><td><label>Email</label></td></tr>
+                <tr><td><input type="email" id="i2"></td></tr>
+                <tr><td><label>Password</label></td></tr>
+                <tr><td><input type="password" id="i3"></td></tr>
+                <tr><td><label>Hobbies</label></td></tr>
+                <tr><td><input type="text"></td></tr>
+                <tr><td><button id="submit" >Submit</button></td></tr>
+            </table>       
+        </form>
+        
+        
+</div>
+</center>
+<script>
+    function validation() {
+        const name = document.getElementById("i1").value;
+        const email = document.getElementById("i2").value;
+        const password = document.getElementById("i3").value;
+
+        console.log("Name:", name);
+        console.log("Email:", email);
+        console.log("Password:", password);
+
+        // Add your validation logic here
+
+        // Return true or false based on validation result
+        return false; // Change this to true if the form should be submitted
+    }
+</script>
+
+</body>
+</html>
